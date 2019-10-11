@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name         = "DCNavigationController"
-  s.version      = "0.1"
+  s.version      = "0.0.1"
   s.summary      = "A navigationController for iOS"
   s.homepage     = "https://github.com/dicesc/DCNavigationController"
   s.license      = "MIT"
