@@ -9,9 +9,6 @@
 import UIKit
 
 class DCBaseViewController: UIViewController {
-    let navItem: UINavigationItem = UINavigationItem.init()
-    let navBar: UINavigationBar = UINavigationBar.init()
-    let navBackgroundView: UIView = UIView.init()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +17,11 @@ class DCBaseViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        navigationItem.leftBarButtonItem = UIBarButtonItem.init(image: UIImage.init(named: "navbar_black_back"), style: UIBarButtonItem.Style.plain, target: self, action: #selector(back))
+    }
+    
+    @objc func back() {
+        let _ = navigationController?.popViewController(animated: true)
     }
     
 }

@@ -15,7 +15,6 @@ class DCMyViewController: DCBaseViewController {
         setup()
     }
     
-    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         tabBarController?.navigationItem.title = "隐藏"
@@ -36,7 +35,6 @@ extension DCMyViewController {
     
     @objc func clickNextPage(){
         let newVC = DCMyDetailViewController.init()
-        newVC.title = "第二页"
         navigationController?.pushViewController(newVC, animated: true)
     }
 }

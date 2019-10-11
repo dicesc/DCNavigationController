@@ -14,13 +14,9 @@ class DCMyDetailViewController: DCBaseViewController {
     var count: Int = 3
     override func viewDidLoad() {
         super.viewDidLoad()
-        setup()
-        navigationController?.navigationBar.barTintColor = UIColor.random()
-        if count % 2 == 1 {
-            navigationController?.navigationBar.tintColor = .white
-        } else {
-            navigationController?.navigationBar.tintColor = .red
-        }
+        configNav()
+        setupUI()
+        
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -31,7 +27,19 @@ class DCMyDetailViewController: DCBaseViewController {
 
 }
 extension DCMyDetailViewController {
-    fileprivate func setup() {
+    fileprivate func configNav() {
+        navigationController?.navigationBar.barTintColor = UIColor.random()
+        if count % 2 == 1 {
+            navigationController?.navigationBar.tintColor = .red
+        } else {
+            navigationController?.navigationBar.tintColor = .white
+        }
+        let titleLabel = UILabel.init()
+        titleLabel.textColor = .darkGray
+        titleLabel.text = "自定义View"
+        navigationItem.titleView = titleLabel
+    }
+    fileprivate func setupUI() {
         let btn = UIButton.init(type: .custom)
         btn.setTitle("下一页", for: UIControl.State.normal)
         btn.backgroundColor = .random()

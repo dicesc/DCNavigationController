@@ -23,7 +23,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         myVC.title = "隐藏"
         homeVC.title = "首页"
         tabBarController.viewControllers = [homeVC, myVC]
-        window?.rootViewController = DCNavigationController(rootViewController: tabBarController)
+        let navController = DCNavigationController(rootViewController: tabBarController)
+        window?.rootViewController = navController
         window?.makeKeyAndVisible()
         return true
     }
