@@ -18,8 +18,21 @@ class DCNavigationController: UINavigationController {
     private let shadowWidth: CGFloat = 10
     private let coverStartAlpha : CGFloat = 0.1
     
+    fileprivate var newBar: UINavigationBar?
+    
     var screenshotImgs: [UIImage] = []
     var navBarStateList: [DCNavBarStorage] = []
+    
+    override init(rootViewController: UIViewController) {
+        super.init(rootViewController: rootViewController)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+    }
     
     override var isNavigationBarHidden: Bool {
         didSet {
@@ -35,7 +48,7 @@ class DCNavigationController: UINavigationController {
             viewController.navigationItem.leftBarButtonItem = UIBarButtonItem.init(title: "返回", style: .plain, target: self, action: #selector(back))
         }
         //截图保存
-        if let screenImg = screenshot() {
+        if let screenImg = view.screenshot() {
             screenshotImgs.append(screenImg)
         }
         // 保存当前navBar以及navigationController状态
@@ -99,14 +112,14 @@ extension DCNavigationController {
     
     fileprivate func config() {
         delegate = self
-    }
-    
-    fileprivate func setup() {
         navigationBar.isTranslucent = false
         
         panGesture.edges = UIRectEdge.left
         panGesture.addTarget(self, action: #selector(panHandle))
         view.addGestureRecognizer(panGesture)
+    }
+    
+    fileprivate func setup() {
         
         coverView.frame = screenshotIV.bounds
         coverView.backgroundColor = .black
@@ -180,16 +193,9 @@ extension DCNavigationController {
             coverView.alpha =  (1 - offsetPer) * coverStartAlpha
         }
     }
-    func screenshot() -> UIImage? {
-        UIGraphicsBeginImageContextWithOptions(view.bounds.size, true, UIScreen.main.scale)
-        view.drawHierarchy(in: UIScreen.main.bounds, afterScreenUpdates: false)
-        let snapshot = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
-        return snapshot
-    }
 }
 
-extension DCNavigationController: UINavigationControllerDelegate {
+extension DCNavigationController: UINavigationControllerDelegate,UINavigationBarDelegate {
     
     func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationController.Operation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         let animationController = DCAnimationController.init()
@@ -197,5 +203,34 @@ extension DCNavigationController: UINavigationControllerDelegate {
         animationController.navOperation = operation
         return animationController
     }
+    
+    func navigationBar(_ navigationBar: UINavigationBar, shouldPush item: UINavigationItem) -> Bool {
+        //新增一个假的navigationBar
+        let archiveData = NSKeyedArchiver.archivedData(withRootObject: navigationBar)
+        newBar = NSKeyedUnarchiver.unarchiveObject(with: archiveData) as? UINavigationBar
+        newBar!.topItem?.title = item.title
+        newBar!.pushItem(item, animated: false)
+        view.addSubview(newBar!)
+        return true
+       }
+       
+       func navigationBar(_ navigationBar: UINavigationBar, didPush item: UINavigationItem) {
+        //移除这个假的navigationBar
+        newBar?.removeFromSuperview()
+       }
+       
+       func position(for bar: UIBarPositioning) -> UIBarPosition {
+           return .topAttached
+       }
 
+}
+
+extension UIView {
+    func screenshot() -> UIImage? {
+        UIGraphicsBeginImageContextWithOptions(bounds.size, true, UIScreen.main.scale)
+        drawHierarchy(in: bounds, afterScreenUpdates: false)
+        let snapshot = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return snapshot
+    }
 }
