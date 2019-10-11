@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DCNavigationController: UINavigationController {
+open class DCNavigationController: UINavigationController {
     
     private let screenshotIV = UIImageView.init(frame: CGRect.init(x: 0, y: 0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height))
     private let shadowView = UIView.init()
@@ -27,23 +27,23 @@ class DCNavigationController: UINavigationController {
         super.init(rootViewController: rootViewController)
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
     }
     
-    override var isNavigationBarHidden: Bool {
+    override open var isNavigationBarHidden: Bool {
         didSet {
             setNavigationBarHidden(isNavigationBarHidden, animated: false)
         }
     }
     
-    override func setNavigationBarHidden(_ hidden: Bool, animated: Bool) {
+    override open func setNavigationBarHidden(_ hidden: Bool, animated: Bool) {
         super.setNavigationBarHidden(hidden, animated: false)
     }
-    override func pushViewController(_ viewController: UIViewController, animated: Bool) {
+    override open func pushViewController(_ viewController: UIViewController, animated: Bool) {
         if viewControllers.count != 0 {
             viewController.navigationItem.leftBarButtonItem = UIBarButtonItem.init(title: "返回", style: .plain, target: self, action: #selector(back))
         }
@@ -56,7 +56,7 @@ class DCNavigationController: UINavigationController {
         super.pushViewController(viewController, animated: animated)
     }
     
-    override func popViewController(animated: Bool) -> UIViewController? {
+    override open func popViewController(animated: Bool) -> UIViewController? {
         if !animated {
             screenshotImgs.removeLast()            
         }
@@ -66,7 +66,7 @@ class DCNavigationController: UINavigationController {
         }
         return super.popViewController(animated: animated)
     }
-    override func popToViewController(_ viewController: UIViewController, animated: Bool) -> [UIViewController]? {
+    override open func popToViewController(_ viewController: UIViewController, animated: Bool) -> [UIViewController]? {
         var index = 0
         for i in (viewControllers.count - 1)...0 {
             if viewController == viewControllers[i] {
@@ -83,7 +83,7 @@ class DCNavigationController: UINavigationController {
         }
         return super.popToViewController(viewController, animated: animated)
     }
-    override func popToRootViewController(animated: Bool) -> [UIViewController]? {
+    override open func popToRootViewController(animated: Bool) -> [UIViewController]? {
         if !animated {
             screenshotImgs.removeAll()
         } else {
@@ -97,12 +97,12 @@ class DCNavigationController: UINavigationController {
         return super.popToRootViewController(animated: animated)
     }
     
-    override func viewDidLoad() {
+    override open func viewDidLoad() {
         super.viewDidLoad()
         config()
         setup()
     }
-    override func viewWillAppear(_ animated: Bool) {
+    override open func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
     }
@@ -197,14 +197,14 @@ extension DCNavigationController {
 
 extension DCNavigationController: UINavigationControllerDelegate,UINavigationBarDelegate {
     
-    func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationController.Operation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+    public func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationController.Operation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         let animationController = DCAnimationController.init()
         animationController.navController = self
         animationController.navOperation = operation
         return animationController
     }
     
-    func navigationBar(_ navigationBar: UINavigationBar, shouldPush item: UINavigationItem) -> Bool {
+    public func navigationBar(_ navigationBar: UINavigationBar, shouldPush item: UINavigationItem) -> Bool {
         //新增一个假的navigationBar
         let archiveData = NSKeyedArchiver.archivedData(withRootObject: navigationBar)
         newBar = NSKeyedUnarchiver.unarchiveObject(with: archiveData) as? UINavigationBar
@@ -214,12 +214,12 @@ extension DCNavigationController: UINavigationControllerDelegate,UINavigationBar
         return true
        }
        
-       func navigationBar(_ navigationBar: UINavigationBar, didPush item: UINavigationItem) {
+    public func navigationBar(_ navigationBar: UINavigationBar, didPush item: UINavigationItem) {
         //移除这个假的navigationBar
         newBar?.removeFromSuperview()
        }
        
-       func position(for bar: UIBarPositioning) -> UIBarPosition {
+    public func position(for bar: UIBarPositioning) -> UIBarPosition {
            return .topAttached
        }
 

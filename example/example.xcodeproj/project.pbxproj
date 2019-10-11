@@ -7,9 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		230F5D8D23502E6B001CFACD /* DCAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230F5D8A23502E6B001CFACD /* DCAnimationController.swift */; };
-		230F5D8E23502E6B001CFACD /* DCNavBarStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230F5D8B23502E6B001CFACD /* DCNavBarStorage.swift */; };
-		230F5D8F23502E6B001CFACD /* DCNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230F5D8C23502E6B001CFACD /* DCNavigationController.swift */; };
 		23281C56232F629D00E39B40 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23281C55232F629D00E39B40 /* AppDelegate.swift */; };
 		23281C5D232F629F00E39B40 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23281C5C232F629F00E39B40 /* Assets.xcassets */; };
 		23281C71232F654800E39B40 /* DCHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23281C70232F654800E39B40 /* DCHomeViewController.swift */; };
@@ -22,14 +19,14 @@
 		23281C83232F78A400E39B40 /* UIImage+Resize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23281C7E232F78A400E39B40 /* UIImage+Resize.swift */; };
 		23281C84232F78A400E39B40 /* UIImage+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23281C7F232F78A400E39B40 /* UIImage+Color.swift */; };
 		23281C85232F78A400E39B40 /* UIView+Frame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23281C80232F78A400E39B40 /* UIView+Frame.swift */; };
+		23FBA23623505DD000957BE8 /* DCNavBarStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FBA23323505DD000957BE8 /* DCNavBarStorage.swift */; };
+		23FBA23723505DD000957BE8 /* DCNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FBA23423505DD000957BE8 /* DCNavigationController.swift */; };
+		23FBA23823505DD000957BE8 /* DCAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FBA23523505DD000957BE8 /* DCAnimationController.swift */; };
 		4A317C66036EE260CD2E0B5F /* Pods_example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD54F828AC70D7502AEF94B6 /* Pods_example.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1CFBE85853917B15E5D6FB6C /* Pods-example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-example/Pods-example.debug.xcconfig"; sourceTree = "<group>"; };
-		230F5D8A23502E6B001CFACD /* DCAnimationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DCAnimationController.swift; path = ../../DCNavController/DCAnimationController.swift; sourceTree = "<group>"; };
-		230F5D8B23502E6B001CFACD /* DCNavBarStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DCNavBarStorage.swift; path = ../../DCNavController/DCNavBarStorage.swift; sourceTree = "<group>"; };
-		230F5D8C23502E6B001CFACD /* DCNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DCNavigationController.swift; path = ../../DCNavController/DCNavigationController.swift; sourceTree = "<group>"; };
 		23281C52232F629D00E39B40 /* example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		23281C55232F629D00E39B40 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		23281C5C232F629F00E39B40 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -44,6 +41,9 @@
 		23281C7E232F78A400E39B40 /* UIImage+Resize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Resize.swift"; sourceTree = "<group>"; };
 		23281C7F232F78A400E39B40 /* UIImage+Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Color.swift"; sourceTree = "<group>"; };
 		23281C80232F78A400E39B40 /* UIView+Frame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Frame.swift"; sourceTree = "<group>"; };
+		23FBA23323505DD000957BE8 /* DCNavBarStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DCNavBarStorage.swift; path = ../../DCNavController/DCNavBarStorage.swift; sourceTree = "<group>"; };
+		23FBA23423505DD000957BE8 /* DCNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DCNavigationController.swift; path = ../../DCNavController/DCNavigationController.swift; sourceTree = "<group>"; };
+		23FBA23523505DD000957BE8 /* DCAnimationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DCAnimationController.swift; path = ../../DCNavController/DCAnimationController.swift; sourceTree = "<group>"; };
 		7F5A3B6CD8B0C5E51A0C1A1E /* Pods-example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-example.release.xcconfig"; path = "Pods/Target Support Files/Pods-example/Pods-example.release.xcconfig"; sourceTree = "<group>"; };
 		BD54F828AC70D7502AEF94B6 /* Pods_example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -95,9 +95,9 @@
 		23281C67232F648300E39B40 /* DCNavController */ = {
 			isa = PBXGroup;
 			children = (
-				230F5D8A23502E6B001CFACD /* DCAnimationController.swift */,
-				230F5D8B23502E6B001CFACD /* DCNavBarStorage.swift */,
-				230F5D8C23502E6B001CFACD /* DCNavigationController.swift */,
+				23FBA23523505DD000957BE8 /* DCAnimationController.swift */,
+				23FBA23323505DD000957BE8 /* DCNavBarStorage.swift */,
+				23FBA23423505DD000957BE8 /* DCNavigationController.swift */,
 			);
 			path = DCNavController;
 			sourceTree = "<group>";
@@ -258,15 +258,15 @@
 				23281C81232F78A400E39B40 /* UIScreen+Frame.swift in Sources */,
 				23281C73232F655300E39B40 /* DCMyViewController.swift in Sources */,
 				23281C56232F629D00E39B40 /* AppDelegate.swift in Sources */,
+				23FBA23723505DD000957BE8 /* DCNavigationController.swift in Sources */,
 				23281C85232F78A400E39B40 /* UIView+Frame.swift in Sources */,
-				230F5D8E23502E6B001CFACD /* DCNavBarStorage.swift in Sources */,
-				230F5D8D23502E6B001CFACD /* DCAnimationController.swift in Sources */,
 				23281C71232F654800E39B40 /* DCHomeViewController.swift in Sources */,
-				230F5D8F23502E6B001CFACD /* DCNavigationController.swift in Sources */,
 				23281C83232F78A400E39B40 /* UIImage+Resize.swift in Sources */,
 				23281C82232F78A400E39B40 /* UIColor+Hex.swift in Sources */,
+				23FBA23823505DD000957BE8 /* DCAnimationController.swift in Sources */,
 				23281C84232F78A400E39B40 /* UIImage+Color.swift in Sources */,
 				23281C75232F699600E39B40 /* DCBaseViewController.swift in Sources */,
+				23FBA23623505DD000957BE8 /* DCNavBarStorage.swift in Sources */,
 				23281C7A232F6B4B00E39B40 /* DCHomeDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
