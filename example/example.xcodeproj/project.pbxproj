@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		230F5D8D23502E6B001CFACD /* DCAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230F5D8A23502E6B001CFACD /* DCAnimationController.swift */; };
+		230F5D8E23502E6B001CFACD /* DCNavBarStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230F5D8B23502E6B001CFACD /* DCNavBarStorage.swift */; };
+		230F5D8F23502E6B001CFACD /* DCNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230F5D8C23502E6B001CFACD /* DCNavigationController.swift */; };
 		23281C56232F629D00E39B40 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23281C55232F629D00E39B40 /* AppDelegate.swift */; };
 		23281C5D232F629F00E39B40 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23281C5C232F629F00E39B40 /* Assets.xcassets */; };
-		23281C6B232F648300E39B40 /* DCAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23281C68232F648300E39B40 /* DCAnimationController.swift */; };
-		23281C6C232F648300E39B40 /* DCNavBarStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23281C69232F648300E39B40 /* DCNavBarStorage.swift */; };
-		23281C6D232F648300E39B40 /* DCNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23281C6A232F648300E39B40 /* DCNavigationController.swift */; };
 		23281C71232F654800E39B40 /* DCHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23281C70232F654800E39B40 /* DCHomeViewController.swift */; };
 		23281C73232F655300E39B40 /* DCMyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23281C72232F655300E39B40 /* DCMyViewController.swift */; };
 		23281C75232F699600E39B40 /* DCBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23281C74232F699600E39B40 /* DCBaseViewController.swift */; };
@@ -27,13 +27,13 @@
 
 /* Begin PBXFileReference section */
 		1CFBE85853917B15E5D6FB6C /* Pods-example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-example/Pods-example.debug.xcconfig"; sourceTree = "<group>"; };
+		230F5D8A23502E6B001CFACD /* DCAnimationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DCAnimationController.swift; path = ../../DCNavController/DCAnimationController.swift; sourceTree = "<group>"; };
+		230F5D8B23502E6B001CFACD /* DCNavBarStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DCNavBarStorage.swift; path = ../../DCNavController/DCNavBarStorage.swift; sourceTree = "<group>"; };
+		230F5D8C23502E6B001CFACD /* DCNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DCNavigationController.swift; path = ../../DCNavController/DCNavigationController.swift; sourceTree = "<group>"; };
 		23281C52232F629D00E39B40 /* example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		23281C55232F629D00E39B40 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		23281C5C232F629F00E39B40 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		23281C61232F629F00E39B40 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		23281C68232F648300E39B40 /* DCAnimationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DCAnimationController.swift; sourceTree = "<group>"; };
-		23281C69232F648300E39B40 /* DCNavBarStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DCNavBarStorage.swift; sourceTree = "<group>"; };
-		23281C6A232F648300E39B40 /* DCNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DCNavigationController.swift; sourceTree = "<group>"; };
 		23281C70232F654800E39B40 /* DCHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DCHomeViewController.swift; sourceTree = "<group>"; };
 		23281C72232F655300E39B40 /* DCMyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DCMyViewController.swift; sourceTree = "<group>"; };
 		23281C74232F699600E39B40 /* DCBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DCBaseViewController.swift; sourceTree = "<group>"; };
@@ -95,9 +95,9 @@
 		23281C67232F648300E39B40 /* DCNavController */ = {
 			isa = PBXGroup;
 			children = (
-				23281C68232F648300E39B40 /* DCAnimationController.swift */,
-				23281C69232F648300E39B40 /* DCNavBarStorage.swift */,
-				23281C6A232F648300E39B40 /* DCNavigationController.swift */,
+				230F5D8A23502E6B001CFACD /* DCAnimationController.swift */,
+				230F5D8B23502E6B001CFACD /* DCNavBarStorage.swift */,
+				230F5D8C23502E6B001CFACD /* DCNavigationController.swift */,
 			);
 			path = DCNavController;
 			sourceTree = "<group>";
@@ -259,15 +259,15 @@
 				23281C73232F655300E39B40 /* DCMyViewController.swift in Sources */,
 				23281C56232F629D00E39B40 /* AppDelegate.swift in Sources */,
 				23281C85232F78A400E39B40 /* UIView+Frame.swift in Sources */,
+				230F5D8E23502E6B001CFACD /* DCNavBarStorage.swift in Sources */,
+				230F5D8D23502E6B001CFACD /* DCAnimationController.swift in Sources */,
 				23281C71232F654800E39B40 /* DCHomeViewController.swift in Sources */,
+				230F5D8F23502E6B001CFACD /* DCNavigationController.swift in Sources */,
 				23281C83232F78A400E39B40 /* UIImage+Resize.swift in Sources */,
 				23281C82232F78A400E39B40 /* UIColor+Hex.swift in Sources */,
 				23281C84232F78A400E39B40 /* UIImage+Color.swift in Sources */,
-				23281C6D232F648300E39B40 /* DCNavigationController.swift in Sources */,
 				23281C75232F699600E39B40 /* DCBaseViewController.swift in Sources */,
-				23281C6C232F648300E39B40 /* DCNavBarStorage.swift in Sources */,
 				23281C7A232F6B4B00E39B40 /* DCHomeDetailViewController.swift in Sources */,
-				23281C6B232F648300E39B40 /* DCAnimationController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
